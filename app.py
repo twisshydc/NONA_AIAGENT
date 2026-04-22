@@ -6,11 +6,11 @@ class MobileApp(ctk.CTk):
 
         # 1. Set the 'Phone' dimensions (Portrait mode)
         self.geometry("375x667") 
-        self.title("Mobile UI")
-        self.configure(fg_color="#ffffff") # Deep dark background
+        self.title("Chat")
+        self.configure(fg_color="#FFFBC6") # Deep dark background
 
         # 2. Header / Status Bar Area
-        self.header = ctk.CTkFrame(self, height=80, corner_radius=0, fg_color="#2b2b2b")
+        self.header = ctk.CTkFrame(self, height=80, corner_radius=0, fg_color="#63b32e")
         self.header.pack(fill="x", side="top")
         
         self.title_label = ctk.CTkLabel(self.header, text="My AI App", 
@@ -22,7 +22,7 @@ class MobileApp(ctk.CTk):
         self.feed.pack(fill="both", expand=True, padx=10, pady=10)
 
         # Let's add some "Cards" to the feed
-        for i in range(5):
+        for i in range(6):
             self.add_card(f"AI Update #{i+1}", "This is a mobile-style card component.")
 
         # 4. Bottom Navigation / Input Area
